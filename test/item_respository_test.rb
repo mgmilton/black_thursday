@@ -67,6 +67,69 @@ class ItemRepositoryTest < Minitest::Test
     end
   end
 
+  def test_find_all_by_price_returns_an_array_of_all_instances_of_item
+    assert_instance_of Array, @items.find_all_by_price(1200)
+
+    assert_instance_of Item, @items.find_all_by_price(1200)[0]
+  end
+
+  def test_find_all_by_price_returns_empty_array_when_none_found
+    assert_equal [], @items.find_all_by_price(0)
+  end
+
+
+  def test_find_all_by_price_only_accepts_integers
+    assert_raises ArgumentError do
+      @items.find_all_by_price("1")
+    end
+
+    assert_raises ArgumentError do
+      @items.find_all_by_price(["a", "b"])
+    end
+  end
+
+  def test_find_all_by_price_in_range_returns_an_array_of_all_instances_of_item
+    assert_instance_of Array, @items.find_all_by_price_in_range(1000..1500)
+
+    assert_instance_of Item, @items.find_all_by_price_in_range(1000..1500)[0]
+  end
+
+  def test_find_all_by_price_in_range_returns_empty_array_when_none_found
+    assert_equal [], @items.find_all_by_price_in_range(-4..0)
+  end
+
+
+  def test_find_all_by_price_in_range_only_accepts_ranges
+    assert_raises ArgumentError do
+      @items.find_all_by_price_in_range("1")
+    end
+
+    assert_raises ArgumentError do
+      @items.find_all_by_price_in_range(["a", "b"])
+    end
+  end
+
+  def test_find_all_by_merchant_id_returns_an_array_of_all_instances_of_item
+    assert_instance_of Array, @items.find_all_by_merchant_id("12334185")
+
+    assert_instance_of Item, @items.find_all_by_merchant_id("12334185")[0]
+  end
+
+  def test_find_all_by_merchant_id_returns_empty_array_when_none_found
+    assert_equal [], @items.find_all_by_merchant_id("0")
+  end
+
+
+  def test_find_all_by_merchant_id_only_accepts_ranges
+    assert_raises ArgumentError do
+      @items.find_all_by_merchant_id(1)
+    end
+
+    assert_raises ArgumentError do
+      @items.find_all_by_merchant_id(["a", "b"])
+    end
+  end
+
   def test_csv_opener_only_accepts_strings
     assert_raises ArgumentError do
       @items.csv_opener(1)

@@ -40,13 +40,19 @@ class ItemRepository
     @items.select {|item| item if item.description.downcase.include?(fragment.downcase)}
   end
 
-  def find_all_by_price
+  def find_all_by_price(price)
+    argument_raiser(price, Fixnum)
+    @items.select {|item| item if item.unit_price == price}
   end
 
-  def find_all_by_price_in_range
+  def find_all_by_price_in_range(range)
+    argument_raiser(range, Range)
+    @items.select {|item| item if range.include?(item.unit_price)}
   end
 
-  def find_all_by_merchant_id
+  def find_all_by_merchant_id(id)
+    argument_raiser(id)
+    @items.select {|item| item if item.merchant_id == id}
   end
 
   def argument_raiser(data_type, desired_class = String)

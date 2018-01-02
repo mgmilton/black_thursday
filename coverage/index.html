@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-01-02T15:56:04-07:00">2018-01-02T15:56:04-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-01-02T16:32:31-07:00">2018-01-02T16:32:31-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2122.79
+         3092.33
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>92</b> relevant lines. 
-    <span class="green"><b>92</b> lines covered</span> and
+    <b>99</b> relevant lines. 
+    <span class="green"><b>99</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,21 +53,21 @@
       <tr>
         <td class="strong"><a href="#aaa6989f4922bc64afd23d6a29323e34954332e8" class="src_link" title="lib/item.rb">lib/item.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>10</td>
-        <td>10</td>
+        <td>22</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>13396.9</td>
+        <td>20008.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#9bd2fead8d7b0ec55ab8ff21eab94e69da86ffe4" class="src_link" title="lib/item_repository.rb">lib/item_repository.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>58</td>
-        <td>31</td>
-        <td>31</td>
+        <td>64</td>
+        <td>37</td>
+        <td>37</td>
         <td>0</td>
-        <td>800.1</td>
+        <td>1338.5</td>
       </tr>
       
       <tr>
@@ -121,8 +121,8 @@
     <h3>lib/item.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -130,127 +130,133 @@
   <pre>
     <ol>
       
-        <li class="never" data-hits="" data-linenumber="1">
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;bigdecimal&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Item</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :id,</code>
+          <code class="ruby">class Item</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">              :name,</code>
+          <code class="ruby">  attr_reader :id,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">              :description,</code>
+          <code class="ruby">              :name,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">              :unit_price,</code>
+          <code class="ruby">              :description,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">              :merchant_id,</code>
+          <code class="ruby">              :unit_price,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">              :created_at,</code>
+          <code class="ruby">              :merchant_id,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">              :updated_at</code>
+          <code class="ruby">              :created_at,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby">              :updated_at</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize(info, item_repository = &quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="12">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="13">
+          <span class="hits">31441</span>
           
           <code class="ruby">    @id = info[:id]</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="13">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="14">
+          <span class="hits">31441</span>
           
           <code class="ruby">    @name = info[:name]</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="14">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="15">
+          <span class="hits">31441</span>
           
           <code class="ruby">    @description = info[:description]</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="15">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="16">
+          <span class="hits">31441</span>
           
-          <code class="ruby">    @unit_price = info[:unit_price]</code>
+          <code class="ruby">    @unit_price = BigDecimal.new(info[:unit_price])</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="16">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="17">
+          <span class="hits">31441</span>
           
           <code class="ruby">    @merchant_id = info[:merchant_id]</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="17">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="18">
+          <span class="hits">31441</span>
           
           <code class="ruby">    @created_at = info[:created_at]</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="18">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="19">
+          <span class="hits">31441</span>
           
           <code class="ruby">    @updated_at = info[:updated_at]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
@@ -266,8 +272,8 @@
     <h3>lib/item_repository.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>31</b> relevant lines. 
-      <span class="green"><b>31</b> lines covered</span> and
+      <b>37</b> relevant lines. 
+      <span class="green"><b>37</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -317,14 +323,14 @@
           <code class="ruby">  def initialize(path, sales_engine = &quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="8">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="23" data-linenumber="8">
+          <span class="hits">23</span>
           
           <code class="ruby">    @items = []</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="9">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="23" data-linenumber="9">
+          <span class="hits">23</span>
           
           <code class="ruby">    item_creator_and_storer(path)</code>
         </li>
@@ -347,14 +353,14 @@
           <code class="ruby">  def csv_opener(path)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="13">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="25" data-linenumber="13">
+          <span class="hits">25</span>
           
           <code class="ruby">    argument_raiser(path)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="14">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="23" data-linenumber="14">
+          <span class="hits">23</span>
           
           <code class="ruby">    CSV.open path, headers: true, header_converters: :symbol</code>
         </li>
@@ -377,20 +383,20 @@
           <code class="ruby">  def item_creator_and_storer(path)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="18">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="25" data-linenumber="18">
+          <span class="hits">25</span>
           
           <code class="ruby">    argument_raiser(path)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="19">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="23" data-linenumber="19">
+          <span class="hits">23</span>
           
           <code class="ruby">    csv_opener(path).each do |item|</code>
         </li>
       
-        <li class="covered" data-hits="19138" data-linenumber="20">
-          <span class="hits">19138</span>
+        <li class="covered" data-hits="31441" data-linenumber="20">
+          <span class="hits">31441</span>
           
           <code class="ruby">      @items &lt;&lt; Item.new(item, self)</code>
         </li>
@@ -530,79 +536,79 @@
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">  def find_all_by_price</code>
+          <code class="ruby">  def find_all_by_price(price)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="5" data-linenumber="44">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    argument_raiser(price, Fixnum)</code>
+        </li>
+      
+        <li class="covered" data-hits="4104" data-linenumber="45">
+          <span class="hits">4104</span>
+          
+          <code class="ruby">    @items.select {|item| item if item.unit_price == price}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="46">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def find_all_by_price_in_range</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">  def find_all_by_merchant_id</code>
+          <code class="ruby">  def find_all_by_price_in_range(range)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="5" data-linenumber="49">
+          <span class="hits">5</span>
           
+          <code class="ruby">    argument_raiser(range, Range)</code>
+        </li>
+      
+        <li class="covered" data-hits="4104" data-linenumber="50">
+          <span class="hits">4104</span>
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    @items.select {|item| item if range.include?(item.unit_price)}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">  def argument_raiser(data_type, desired_class = String)</code>
+          <code class="ruby">  def find_all_by_merchant_id(id)</code>
         </li>
       
-        <li class="covered" data-hits="47" data-linenumber="53">
-          <span class="hits">47</span>
+        <li class="covered" data-hits="5" data-linenumber="54">
+          <span class="hits">5</span>
           
-          <code class="ruby">    if data_type.class != desired_class</code>
+          <code class="ruby">    argument_raiser(id)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="54">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="4104" data-linenumber="55">
+          <span class="hits">4104</span>
           
-          <code class="ruby">      raise ArgumentError</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">    @items.select {|item| item if item.merchant_id == id}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
@@ -617,7 +623,43 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def argument_raiser(data_type, desired_class = String)</code>
+        </li>
+      
+        <li class="covered" data-hits="80" data-linenumber="59">
+          <span class="hits">80</span>
+          
+          <code class="ruby">    if data_type.class != desired_class</code>
+        </li>
+      
+        <li class="covered" data-hits="17" data-linenumber="60">
+          <span class="hits">17</span>
+          
+          <code class="ruby">      raise ArgumentError</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">end</code>

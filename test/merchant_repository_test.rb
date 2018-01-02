@@ -10,6 +10,7 @@ class MerchantRepositoryTest < MiniTest::Test
   def test_all_returns_merchants
     assert_equal @merchants.merchants, @merchants.all
   end
+  
   def test_find_by_id_is_nil_when_passed_non_matching_id
     assert_nil @merchants.find_by_id("a")
   end
