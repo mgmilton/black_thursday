@@ -26,4 +26,3 @@ se = SalesEngine.from_csv({
 })
 
 merchant = se.merchants.find_by_id(12334105)
-require 'pry' ; binding.pry
