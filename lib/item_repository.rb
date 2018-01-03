@@ -24,7 +24,7 @@ class ItemRepository
   end
 
   def find_by_id(id)
-    argument_raiser(id, Integer)
+    argument_raiser(id, Fixnum)
     @items.find {|item| item.id.to_i == id}
   end
 
@@ -39,7 +39,7 @@ class ItemRepository
   end
 
   def find_all_by_price(price)
-    argument_raiser(price, Integer)
+    argument_raiser(price, Fixnum)
     @items.select {|item| item if item.unit_price == price}
   end
 

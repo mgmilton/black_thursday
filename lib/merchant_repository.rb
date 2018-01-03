@@ -2,10 +2,12 @@ require 'csv'
 require './lib/merchant.rb'
 
 class MerchantRepository
-  attr_reader :merchants
+  attr_reader :merchants,
+              :parent
 
   def initialize(path, sales_engine = "")
-    @merchants = []
+    @merchants  = []
+    @parent     = sales_engine
     merchant_creator_and_storer(path)
   end
 
@@ -14,7 +16,7 @@ class MerchantRepository
   end
 
   def find_by_id(id)
-    argument_raiser(id, Integer)
+    argument_raiser(id, Fixnum)
     @merchants.find {|merchant| merchant.id.to_i == id}
   end
 
@@ -45,6 +47,10 @@ class MerchantRepository
     if data_type.class != desired_class
       raise ArgumentError
     end
+  end
+
+  def items
+    @parent.items
   end
 
 end
