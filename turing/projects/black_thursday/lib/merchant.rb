@@ -9,7 +9,6 @@ class Merchant
     @name = info[:name]
     @created_at = info[:created_at]
     @updated_at = info[:updated_at]
-    @merchant_repository = merchant_repository
   end
 
 end

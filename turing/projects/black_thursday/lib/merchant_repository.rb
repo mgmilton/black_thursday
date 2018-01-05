@@ -6,7 +6,6 @@ class MerchantRepository
 
   def initialize(path, sales_engine = "")
     @merchants = []
-    @sales_engine = sales_engine
     merchant_creator_and_storer(path)
   end
 

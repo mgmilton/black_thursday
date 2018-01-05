@@ -6,7 +6,6 @@ class ItemRepository
 
   def initialize(path, sales_engine = "")
     @items = []
-    @sales_engine = sales_engine
     item_creator_and_storer(path)
   end
 

@@ -25,4 +25,6 @@ se = SalesEngine.from_csv({
   :merchants => "./data/merchants.csv",
 })
 
-merchant = se.merchants.find_by_id(12334105)
+
+
+ 
