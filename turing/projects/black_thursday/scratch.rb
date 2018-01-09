@@ -1,26 +1,53 @@
-def dfs(adj_matrix, source, terminal)
-  node_stack = [source]
+def most_sold_item_for_merchant(id)
+  paid_invoices(id)
+  flat_invoice_items(id)
+  grouped_invoice_items(id)
+  transformed(id)
+  items_and_quantity(id)
+  quantity_hash(id)
+  all_item_by_ids(id)
+end
 
-  loop do
-    current_node = node_stack.pop
-    return false if current_node == nil
-    return true if current_node == terminal
-
-    children = (0..adj_matrix.length-1).to_a.select do |i|
-      adj_matrix[current_node][i] == 1
-    end
-
-    node_stack += children
+def paid_invoices(id)
+ @sales_engine.find_invoice_by_merchant_id(id).select do |invoice|
+    invoice.is_paid_in_full?
   end
 end
 
-adj_matrix = [
-  [1, 0, 1, 0, 1, 0],
-  [0, 0, 1, 0, 0, 1],
-  [0, 0, 0, 1, 0, 0],
-  [0, 1, 0, 0, 1, 1],
-  [0, 0, 1, 0, 0, 0],
-  [0, 0, 1, 1, 0, 0]
-]
+def flat_invoice_items(id)
+  paid_invoices(id).map do |invoice|
+    invoice.invoice_items
+  end.flatten
+end
 
-p dfs(adj_matrix, 0, 5)
+def grouped_invoice_items(id)
+  flat_invoice_items(id).group_by do |invoice_item|
+    invoice_item.item_id
+  end
+end
+
+def transformed(id)
+  grouped_invoice_items(id).transform_values do |value|
+    value.map do |invoice_item|
+      invoice_item.quantity
+    end
+  end
+end
+
+def items_and_quantity(id)
+  transformed(id).sort_by do |pair|
+    pair.flatten![1]
+  end
+end
+
+def quantity_hash(id)
+  items_and_quantity(id).group_by do |value|
+    value[1]
+  end
+end
+
+def all_item_by_ids(id)
+  quantity_hash(id).map do |item_id|
+    @sales_engine.find_item_by_id(item_id)
+  end
+end
